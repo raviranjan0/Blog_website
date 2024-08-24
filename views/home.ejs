@@ -1,0 +1,14 @@
+<%- include('header'); %>
+    <div class="container">
+    <h1 class="text-center">Home</h1>
+    <section>
+    <% allposts.forEach((post) =>{ %>
+        <h1><%= post.title%></h1>
+        <p class="fst-italic"><small><mark><%= post.date %></mark></small></p>
+        <p><%= post.text.substring(0, 250) %> <a href="/blog/search?q=<%= post.title%>" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">read more</a></p>
+        <hr/>
+    <%})%>
+</section>
+
+</div>
+<%- include('footer') %>
